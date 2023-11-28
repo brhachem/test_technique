@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dependencies/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dependencies/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/dependencies/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/commons_components/build" />
+      <excludeFolder url="file://$MODULE_DIR$/commons_components/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/commons_components/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/preferences/build" />
+      <excludeFolder url="file://$MODULE_DIR$/preferences/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/preferences/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/l10n/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/l10n/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/l10n/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dimelo_plugin/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dimelo_plugin/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/dimelo_plugin/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/dimelo_plugin/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/dimelo_plugin/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/dimelo_plugin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/commons_entities/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/commons_entities/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/commons_entities/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>

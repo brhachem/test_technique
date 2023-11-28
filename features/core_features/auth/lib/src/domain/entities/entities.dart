@@ -1,0 +1,1 @@
+export 'ranking_details_entity/ranking_details_entity.dart';

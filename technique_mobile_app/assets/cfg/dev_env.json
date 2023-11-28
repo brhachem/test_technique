@@ -1,0 +1,27 @@
+{
+    "base_url": "https://back.staging-carrefourv2.satoripop.io/graphql",
+    "app_name": "Place Dev",
+    "encrypt": "AlOp8lBkcFRdJnXFkGcBHwM9I9TJMMas",
+    "version_name": "1",
+    "play_store_app": "https://play.google.com/",
+    "app_store_app": "https://apps.apple.com/",
+    "default_language ": "fr",
+    "base_url_media": "https://back.staging-carrefourv2.satoripop.io/graphql/",
+    "base_url_media_category": "https://back.staging-carrefourv2.satoripop.io/graphql/",
+    "base_url_keycloak": "https://back.staging-carrefourv2.satoripop.io/graphql",
+    "headers_authorization_keycloak":"Basic aW50ZXJuYWw6aW50ZXJuYWw=",
+    "tenantId": "tn",
+    "lang": "fr",
+    "dev": true,
+    "auth_timer_duration_resend": 30,
+    "auth_timer_duration_sms": 30,
+    "segment_write_key_ios": "",
+    "segment_write_key_android": "",
+    "dimelo_api_key": "",
+    "dimelo_domain_name": "",
+
+    "country": "TN",
+    "countryChangeEnabled": false
+
+
+}

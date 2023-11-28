@@ -1,0 +1,190 @@
+name: dependencies
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+  flutter: ">=1.17.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  ##### UI #####
+
+  # plugin for adapting screen and font size
+  # See https://pub.dev/packages/flutter_screenutil
+  flutter_screenutil: ^5.7.0
+
+  # SVG rendering and widget library for Flutter
+  # See https://pub.dev/packages/flutter_svg
+  flutter_svg: ^2.0.4
+
+  # Package provides an easy way to add shimmer effect.
+  # See https://pub.dev/packages/shimmer
+  shimmer: ^2.0.0
+
+  # Render After Effects animations natively on Flutter.
+  # See https://pub.dev/packages/lottie
+  lottie: ^2.3.0
+
+
+
+  ##### CORE #####
+
+  # Http client. See https://pub.dev/packages/dio
+  dio: ^5.0.2
+
+  # Functional Programming in Dart
+  # See https://pub.dev/packages/dartz/versions/0.10.0-nullsafety.2
+  dartz: ^0.10.1
+
+  # Widgets that make it easy to implement the BLoC.
+  # See https://pub.dev/packages/flutter_bloc
+  flutter_bloc: ^8.1.2
+
+  # State management library.
+  # See https://pub.dev/packages/bloc
+  bloc: ^8.1.1
+
+  # Formz aims to simplify form representation and validation in a generic way.
+  # See https://pub.dev/packages/formz
+  formz: ^0.4.1
+
+  # Simple direct Service Locator for Dependency Injection.
+  # See https://pub.dev/packages/get_it
+  get_it: ^7.2.0
+
+  # Internet connection checker.
+  # See https://pub.dev/packages/internet_connection_checker
+  internet_connection_checker: ^1.0.0+1
+
+  # Hive is a lightweight and blazing fast key-value database written in pure Dart
+  # See https://pub.dev/packages/hive
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+
+  # path_provider is a plugin for getting commonly used locations on host platform file systems, such as the temp and app data directories
+  # See https://pub.dev/packages/path_provider
+  path_provider: ^2.0.13
+
+  # Internationalization and localization support
+  # See https://pub.dev/packages/intlx
+  intl: ^0.18.0
+
+  # AutoRoute is a declarative routing solution, where everything needed for navigation is automatically generated for you.
+  # See https://pub.dev/packages/auto_route
+  auto_route: ^5.0.1
+
+  # Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
+  # See https://pub.dev/packages/url_launcher
+  #check version kapt  6.1.7==>6.1.6
+  url_launcher: ^6.1.6
+
+  # Helps to implement value based equality without explicitly
+  # override == and hashCode.
+  # See https://pub.dev/packages/equatable
+  equatable: ^2.0.5
+
+
+  flutter_html: ^3.0.0-alpha.5
+
+  # RxDart extends the capabilities of Dart Streams and StreamControllers..
+  # See https://pub.dev/packages/rxdart
+  rxdart: ^0.27.7
+  #Flutter implementation of Segment Analytics for iOS, Android and Web
+  # See https://pub.dev/packages/flutter_segment
+  #flutter_segment: ^3.12.1
+
+  # freezed_annotation Annotations for the freezed code-generator. This package does nothing without freezed too. ..
+  # See https://pub.dev/packages/freezed_annotation
+  freezed_annotation: ^2.2.0
+
+  # Classes and helper functions that support JSON code generation via the `json_serializable` package.
+  # See https://pub.dev/packages/json_annotation
+  json_annotation: ^4.8.0
+
+  #cached_network_image library to load and cache network images. Can also be used with placeholder and error widgets.
+  # See https://pub.dev/packages/cached_network_image
+  cached_network_image: ^3.2.3
+
+  #Generic cache manager for flutter. Saves web files on the storages of the device and saves the cache info using sqflite.
+  # See https://pub.dev/packages/flutter_cache_manager
+  flutter_cache_manager: ^3.3.0
+
+  # See https://pub.dev/packages/package_info_plus
+  package_info_plus: ^3.1.2
+  firebase_core_platform_interface: 4.6.0
+
+  # See https://pub.dev/packages/device_info_plus
+  device_info_plus: ^8.0.0
+
+  # See https://pub.dev/packages/html
+  html: ^0.15.2
+
+  # See https://pub.dev/packages/better_player
+  better_player: ^0.0.83
+
+  sms_autofill: ^2.3.0
+  #check version kapt  1.0.1==>1.0.0
+  qr_code_scanner: ^1.0.0
+  flutter_local_notifications: ^14.1.1
+  open_file: ^3.3.2
+
+
+  #https://pub.dev/packages/permission_handler
+  permission_handler: ^10.2.0
+
+
+  # Flutter plugin that allows you to add an inline webview, to use an headless webview, and to open an in-app browser window.
+  # See https://pub.dev/packages/flutter_inappwebview
+  flutter_inappwebview: ^5.4.3+8
+
+  #Flutter plugin for Firebase Core, enabling connecting to multiple Firebase apps
+  #See https://pub.dev/packages/firebase_core
+  firebase_core: '>=2.8.0 <2.9.0'
+
+
+  # Flutter plugin for Firebase Crashlytics. It reports uncaught errors to the Firebase console
+  #See https://pub.dev/packages/firebase_crashlytics
+  #change version to compatible with firebase_core 10.6.0
+
+  #firebase_crashlytics: ^3.1.2 #firebase_core: ^10.7.0
+  firebase_crashlytics: ^3.0.0
+
+
+  batch_flutter: ^1.3.0
+
+  share_plus: ^6.3.4
+
+  flutter_keyboard_visibility: ^5.4.1
+
+  graphql_flutter: ^5.1.2
+
+  flutter_login_facebook: ^1.7.0
+
+  google_sign_in: ^5.4.2
+
+  sign_in_with_apple: ^4.3.0
+
+  intl_phone_number_input: ^0.7.3+1
+
+  local_auth: ^2.1.6
+
+  google_fonts: ^4.0.0
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+  dart_code_metrics: ^5.6.0
+  build_runner: ^2.3.3
+  build_resolvers: ^2.2.0
+
+flutter:

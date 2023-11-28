@@ -1,0 +1,54 @@
+[
+{
+"screenName": "shop_services",
+"organisms": {
+"org1": {
+"sectionTitle":"Popular services",
+"organismName":"org_card_l_carousel_image_square",
+"items": [{{#org1.items}}
+    {
+    "cover": {"type":"{{cover.type}}","value":"{{cover.value}}"},
+    "thumbnail": {"type":"{{thumbnail.type}}","value":"{{thumbnail.value}}"},
+    "title": "{{title}}",
+    "subTitle": "{{subTitle}}"
+    }{{#comma}},{{/comma}}
+{{/org1.items}}]
+},
+
+
+"org2": {
+"sectionTitle":"Top 3 of the week",
+"organismName":"org_top3card",
+"items": [{{#org2.items}}
+    {
+    "thumbnail": {"type":"{{thumbnail.type}}","value":"{{thumbnail.value}}"},
+    "title": "{{title}}",
+    "subTitle": "{{subTitle}}"
+    }{{#comma}},{{/comma}}
+{{/org2.items}}]
+},
+"org3": {
+"sectionTitle": "Latest services",
+"organismName":"org_card_m_carousel",
+"items": [{{#org3.items}}
+    {
+    "cover": {"type":"{{cover.type}}","value":"{{cover.value}}"},
+    "thumbnail": {"type":"{{thumbnail.type}}","value":"{{thumbnail.value}}"},
+    "title": "{{title}}",
+    "description": "{{subTitle}}"
+    }{{#comma}},{{/comma}}
+{{/org3.items}}]
+},
+"org4": {
+"sectionTitle": "Service by category",
+"organismName":"org_sectionbycategory",
+"items": [{{#org4.items}}
+    {
+    "thumbnail": {"type":"{{thumbnail.type}}","value":"{{thumbnail.value}}"},
+    "label": "{{label}}"
+    }{{#comma}},{{/comma}}
+{{/org4.items}}]
+}
+}
+}
+]
