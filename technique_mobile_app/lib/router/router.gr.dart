@@ -52,6 +52,17 @@ class AppRouter extends _i3.RootStackRouter {
         ),
       );
     },
+    DetailsPageRouteName.name: (routeData) {
+      final args = routeData.argsAs<DetailsPageRouteNameArgs>(
+          orElse: () => const DetailsPageRouteNameArgs());
+      return _i3.AdaptivePage<dynamic>(
+        routeData: routeData,
+        child: _i2.DetailsPage(
+          key: args.key,
+          rankDetails: args.rankDetails,
+        ),
+      );
+    },
   };
 
   @override
@@ -85,6 +96,11 @@ class AppRouter extends _i3.RootStackRouter {
             _i3.RouteConfig(
               HomeRoute.name,
               path: 'Home',
+              parent: AuthRoute.name,
+            ),
+            _i3.RouteConfig(
+              DetailsPageRouteName.name,
+              path: 'DetailsPageRoute',
               parent: AuthRoute.name,
             ),
           ],
@@ -160,5 +176,39 @@ class HomeRouteArgs {
   @override
   String toString() {
     return 'HomeRouteArgs{key: $key, firstName: $firstName}';
+  }
+}
+
+/// generated route for
+/// [_i2.DetailsPage]
+class DetailsPageRouteName extends _i3.PageRouteInfo<DetailsPageRouteNameArgs> {
+  DetailsPageRouteName({
+    _i5.Key? key,
+    _i2.RankingDetailsEntity? rankDetails,
+  }) : super(
+          DetailsPageRouteName.name,
+          path: 'DetailsPageRoute',
+          args: DetailsPageRouteNameArgs(
+            key: key,
+            rankDetails: rankDetails,
+          ),
+        );
+
+  static const String name = 'DetailsPageRouteName';
+}
+
+class DetailsPageRouteNameArgs {
+  const DetailsPageRouteNameArgs({
+    this.key,
+    this.rankDetails,
+  });
+
+  final _i5.Key? key;
+
+  final _i2.RankingDetailsEntity? rankDetails;
+
+  @override
+  String toString() {
+    return 'DetailsPageRouteNameArgs{key: $key, rankDetails: $rankDetails}';
   }
 }

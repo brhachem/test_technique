@@ -1,27 +1,6 @@
 part of 'home_page.dart';
 
 mixin _HomePageWidgets on _HomePageProps {
-  /*bool toggleShow = true;
-  List<RankingDetailsEntity> evenList = [];
-  List<RankingDetailsEntity> oddList = [];
-  /// fonction emplir deux list :
-  @override
-  void initState() {
-    super.initState();
-    splitLists();
-  }
-
-  void splitLists() {
-    for (int i = 0; i < state.rankingDetails!.length; i++) {
-      if (i.isEven) {
-        evenList.add(state.rankingDetails![i]);
-      } else {
-        oddList.add(state.rankingDetails![i]);
-      }
-    }
-  }
-
-   */
   Widget getMainWidgets(UserInfoState state) {
     Log.d("Home-Page-Widgets");
     return SafeArea(
@@ -30,14 +9,16 @@ mixin _HomePageWidgets on _HomePageProps {
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: BasicDimens.horizontalPadding,
-              vertical: BasicDimens.defaultPaddingBottom,
+              //vertical: BasicDimens.verticalPadding,
             ),
+
+            /// header -------------------
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                /// avatar -------------------
                 Row(
                   children: [
+                    // avatar
                     CircleAvatar(
                       radius: BasicDimens.spacingCustom36,
                       backgroundColor: FoundationColors.onPrimary,
@@ -47,11 +28,13 @@ mixin _HomePageWidgets on _HomePageProps {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // good morning
                         BasicText(
                           TextType.titleLarge,
                           text: S.current.label_good_morning,
                           textColor: FoundationColors.onPrimary,
                         ),
+                        // user name
                         BasicText(
                           TextType.bodyLarge,
                           text: widget.firstName ?? "",
@@ -61,28 +44,12 @@ mixin _HomePageWidgets on _HomePageProps {
                     ),
                   ],
                 ),
-                BasicButton.filled(
-                  text: selectedIndex == null
-                      ? "pairs"
-                      : (selectedIndex! % 2 == 0 ? "impairs" : "pairs"),
-                  onPressed: () {
-                    //btnShowEven();
-                    setState(() {
-                      if (selectedIndex == null) {
-                        // Afficher la liste complète la première fois
-                        selectedIndex =
-                            -1; // Initialisation pour l'affichage complet
-                      } else {
-                        // Alterner entre affichage pair/impair
-                        selectedIndex = selectedIndex! + 1;
-                      }
-                    });
-                  },
-                ),
               ],
             ),
           ),
-          SizedBox(height: BasicDimens.spacingCustom10),
+          SizedBox(height: BasicDimens.spacingCustom14),
+
+          /// body -------------------
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.only(
@@ -99,45 +66,75 @@ mixin _HomePageWidgets on _HomePageProps {
                 child: Center(
                   child: Column(
                     children: [
-                      SizedBox(height: BasicDimens.spacingCustom24),
+                      SizedBox(height: BasicDimens.spacingCustom14),
                       BasicText(
                         TextType.titleLarge,
                         text: S.current.label_top_ranking,
                         textColor: FoundationColors.customColor11,
                       ),
-                      SizedBox(height: BasicDimens.spacingCustom24),
+                      SizedBox(height: BasicDimens.spacingCustom14),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          // show all rank
+                          BasicButton.filled(
+                            text: "show all",
+                            onPressed: () {
+                              context.read<UserInfoBloc>().add(
+                                  const UserInfoEvent.displayRankingDetails());
+                            },
+                          ),
+                          // show pairs || impairs button
+                          BasicButton.filled(
+                            text: "filter",
+                            onPressed: () {
+                              context
+                                  .read<UserInfoBloc>()
+                                  .add(const UserInfoEvent.showEvenOrOdd());
+                            },
+                          ),
+                          // mercedes team
+                          BasicButton.filled(
+                            text: "mercedes",
+                            onPressed: () {
+                              context
+                                  .read<UserInfoBloc>()
+                                  .add(const UserInfoEvent.showMercedesTeam());
+                            },
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: BasicDimens.spacingCustom14),
 
                       /// listView ranking ------------------------
                       /// add null check ---> done
-                      (!BasicUtils.emptyList(state.rankingDetails))
+                      (!BasicUtils.emptyList(state.listFilter))
                           ? Expanded(
                               child: ListView.separated(
                                 itemBuilder: (BuildContext context, int index) {
-                                  if (selectedIndex == null ||
-                                      (selectedIndex! % 2 == 0 &&
-                                          index % 2 == 0) ||
-                                      (selectedIndex! % 2 != 0 &&
-                                          index % 2 != 0)) {
-                                    return RankingDetails(
-                                      onTap: () {},
-                                      rank: state.rankingDetails![index].rank ??
-                                          0,
-                                      name: state.rankingDetails![index].name ??
-                                          "",
-                                      team: state.rankingDetails![index].team ??
-                                          "",
-                                      avatar:
-                                          state.rankingDetails![index].avatar ??
-                                              "",
-                                    );
-                                  }
-                                  return const SizedBox.shrink();
+                                  return RankingDetails(
+                                    onTap: () {
+                                      /// go to details page
+                                      GetIt.I<RouteCubit>()
+                                          .navigateRouteNamed(AutoRouteModel(
+                                        path: AppRoutes.detailsPageRoutePath,
+                                        /// send list
+                                        data: state.listFilter?[index],
+                                      ));
+                                      Log.d(state.listFilter?[index]);
+                                    },
+                                    rank: state.listFilter?[index].rank ?? 0,
+                                    name: state.listFilter?[index].name ?? "",
+                                    team: state.listFilter?[index].team ?? "",
+                                    avatar:
+                                        state.listFilter?[index].avatar ?? "",
+                                  );
                                 },
-                                itemCount: state.rankingDetails!.length,
+                                itemCount: state.listFilter?.length??0,
                                 separatorBuilder:
                                     (BuildContext context, int index) {
                                   return const BasicDivider.horizontal(
-                                      height: 1);
+                                      height: 0);
                                 },
                               ),
                             )

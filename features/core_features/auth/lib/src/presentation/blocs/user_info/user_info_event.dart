@@ -9,8 +9,11 @@ class UserInfoEvent with _$UserInfoEvent {
   const factory UserInfoEvent.onValid() = OnValid;
   /// home ---------
   const factory UserInfoEvent.displayRankingDetails() = DisplayRankingDetails;
-  const factory UserInfoEvent.toggleList() = ToggleList;
+  // filter even or odd function
+  const factory UserInfoEvent.showEvenOrOdd() = ShowEvenOrOdd;
+  // filter mercedes team function
+  const factory UserInfoEvent.showMercedesTeam() = ShowMercedesTeam;
   /// details page
-  const factory UserInfoEvent.toDetailsPage() = ToDetailsPage;
+  const factory UserInfoEvent.toDetailsPage(RankingDetailsEntity rankDetails) = ToDetailsPage;
 
 }

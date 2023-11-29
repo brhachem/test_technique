@@ -16,20 +16,33 @@ class RouterNavigateManager {
         case AppRoutes.authPath:
           GetIt.I<AppRouter>().replaceAll([const AuthRoute()]);
           break;
+
+        /// splash vers user info
         case AppRoutes.userInfoRoutePath:
           GetIt.I<AppRouter>().push(const UserInfoRoute());
           break;
 
+        /// user vers home
         /// send data (firstName)
         case AppRoutes.homeRoutePath:
-          //GetIt.I<AppRouter>().push(const HomeRoute());
           if (autoRouteModel.data != null && (autoRouteModel.data! is String)) {
             try {
               GetIt.I<AppRouter>()
                   .push(HomeRoute(firstName: autoRouteModel.data as String));
             } on Exception catch (_) {}
           }
+          break;
 
+        /// navigate from home to details ::
+        /// send data (obj)
+        case AppRoutes.detailsPageRoutePath:
+          if (autoRouteModel.data != null &&
+              (autoRouteModel.data! is RankingDetailsEntity)) {
+            try {
+              GetIt.I<AppRouter>().push(DetailsPageRouteName(
+                  rankDetails: autoRouteModel.data as RankingDetailsEntity));
+            } on Exception catch (_) {}
+          }
           break;
       }
     }

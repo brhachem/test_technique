@@ -3,25 +3,30 @@ part of 'user_info_bloc.dart';
 @freezed
 class UserInfoState with _$UserInfoState {
   const factory UserInfoState({
-    // user info ---------
+    /// user info ---------
     String? firstName,
     String? lastName,
     bool? isValid,
-    // home --------------
+
+    /// home --------------
     List<RankingDetailsEntity>? rankingDetails,
-    //List<RankingDetailsEntity>? evenRanking,
-    //List<RankingDetailsEntity>? oddRanking,
+    List<RankingDetailsEntity>? listFilter,
     bool? toggleShow,
+    int? selectedIndex,
+    RankingDetailsEntity? rankDetails,
   }) = _UserInfoState;
 
   factory UserInfoState.initial() => const UserInfoState(
+        /// user info
         firstName: "",
         lastName: "",
         isValid: null,
-        // home -----------
+
+        /// home -----------
         rankingDetails: [],
-        //evenRanking: [],
-        //oddRanking: [],
+        listFilter: [],
         toggleShow: true,
+        selectedIndex: 0,
+      rankDetails: null,
       );
 }

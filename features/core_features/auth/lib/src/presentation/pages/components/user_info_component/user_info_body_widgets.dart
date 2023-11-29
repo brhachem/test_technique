@@ -55,7 +55,7 @@ mixin _UserInfoBodyWidgets on _UserInfoBodyProps {
         SliverToBoxAdapter(
           child: BasicButton.filled(
             text: S.current.label_btn_next_app,
-            onPressed: !BasicUtils.isNullOrBlank(state.firstName) ||
+            onPressed: !BasicUtils.isNullOrBlank(state.firstName) &&
                     !BasicUtils.isNullOrBlank(state.lastName)
                 ? () {
                     btnValidation();

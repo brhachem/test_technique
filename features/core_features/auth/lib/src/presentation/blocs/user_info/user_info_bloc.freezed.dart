@@ -22,8 +22,9 @@ mixin _$UserInfoEvent {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,8 +33,9 @@ mixin _$UserInfoEvent {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,8 +44,9 @@ mixin _$UserInfoEvent {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -54,7 +57,8 @@ mixin _$UserInfoEvent {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
@@ -64,7 +68,8 @@ mixin _$UserInfoEvent {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
@@ -74,7 +79,8 @@ mixin _$UserInfoEvent {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) =>
@@ -168,8 +174,9 @@ class _$ChangeFirstName implements ChangeFirstName {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return changeFirstName(firstName);
   }
@@ -181,8 +188,9 @@ class _$ChangeFirstName implements ChangeFirstName {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return changeFirstName?.call(firstName);
   }
@@ -194,8 +202,9 @@ class _$ChangeFirstName implements ChangeFirstName {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
     if (changeFirstName != null) {
@@ -212,7 +221,8 @@ class _$ChangeFirstName implements ChangeFirstName {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return changeFirstName(this);
@@ -225,7 +235,8 @@ class _$ChangeFirstName implements ChangeFirstName {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return changeFirstName?.call(this);
@@ -238,7 +249,8 @@ class _$ChangeFirstName implements ChangeFirstName {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -327,8 +339,9 @@ class _$ChangeLastName implements ChangeLastName {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return changeLastName(lastName);
   }
@@ -340,8 +353,9 @@ class _$ChangeLastName implements ChangeLastName {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return changeLastName?.call(lastName);
   }
@@ -353,8 +367,9 @@ class _$ChangeLastName implements ChangeLastName {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
     if (changeLastName != null) {
@@ -371,7 +386,8 @@ class _$ChangeLastName implements ChangeLastName {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return changeLastName(this);
@@ -384,7 +400,8 @@ class _$ChangeLastName implements ChangeLastName {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return changeLastName?.call(this);
@@ -397,7 +414,8 @@ class _$ChangeLastName implements ChangeLastName {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -457,8 +475,9 @@ class _$OnValid implements OnValid {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return onValid();
   }
@@ -470,8 +489,9 @@ class _$OnValid implements OnValid {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return onValid?.call();
   }
@@ -483,8 +503,9 @@ class _$OnValid implements OnValid {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
     if (onValid != null) {
@@ -501,7 +522,8 @@ class _$OnValid implements OnValid {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return onValid(this);
@@ -514,7 +536,8 @@ class _$OnValid implements OnValid {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return onValid?.call(this);
@@ -527,7 +550,8 @@ class _$OnValid implements OnValid {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -584,8 +608,9 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return displayRankingDetails();
   }
@@ -597,8 +622,9 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return displayRankingDetails?.call();
   }
@@ -610,8 +636,9 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
     if (displayRankingDetails != null) {
@@ -628,7 +655,8 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return displayRankingDetails(this);
@@ -641,7 +669,8 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return displayRankingDetails?.call(this);
@@ -654,7 +683,8 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -670,35 +700,35 @@ abstract class DisplayRankingDetails implements UserInfoEvent {
 }
 
 /// @nodoc
-abstract class _$$ToggleListCopyWith<$Res> {
-  factory _$$ToggleListCopyWith(
-          _$ToggleList value, $Res Function(_$ToggleList) then) =
-      __$$ToggleListCopyWithImpl<$Res>;
+abstract class _$$ShowEvenOrOddCopyWith<$Res> {
+  factory _$$ShowEvenOrOddCopyWith(
+          _$ShowEvenOrOdd value, $Res Function(_$ShowEvenOrOdd) then) =
+      __$$ShowEvenOrOddCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ToggleListCopyWithImpl<$Res>
-    extends _$UserInfoEventCopyWithImpl<$Res, _$ToggleList>
-    implements _$$ToggleListCopyWith<$Res> {
-  __$$ToggleListCopyWithImpl(
-      _$ToggleList _value, $Res Function(_$ToggleList) _then)
+class __$$ShowEvenOrOddCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$ShowEvenOrOdd>
+    implements _$$ShowEvenOrOddCopyWith<$Res> {
+  __$$ShowEvenOrOddCopyWithImpl(
+      _$ShowEvenOrOdd _value, $Res Function(_$ShowEvenOrOdd) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ToggleList implements ToggleList {
-  const _$ToggleList();
+class _$ShowEvenOrOdd implements ShowEvenOrOdd {
+  const _$ShowEvenOrOdd();
 
   @override
   String toString() {
-    return 'UserInfoEvent.toggleList()';
+    return 'UserInfoEvent.showEvenOrOdd()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ToggleList);
+        (other.runtimeType == runtimeType && other is _$ShowEvenOrOdd);
   }
 
   @override
@@ -711,10 +741,11 @@ class _$ToggleList implements ToggleList {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
-    return toggleList();
+    return showEvenOrOdd();
   }
 
   @override
@@ -724,10 +755,11 @@ class _$ToggleList implements ToggleList {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
-    return toggleList?.call();
+    return showEvenOrOdd?.call();
   }
 
   @override
@@ -737,12 +769,13 @@ class _$ToggleList implements ToggleList {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
-    if (toggleList != null) {
-      return toggleList();
+    if (showEvenOrOdd != null) {
+      return showEvenOrOdd();
     }
     return orElse();
   }
@@ -755,10 +788,11 @@ class _$ToggleList implements ToggleList {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
-    return toggleList(this);
+    return showEvenOrOdd(this);
   }
 
   @override
@@ -768,10 +802,11 @@ class _$ToggleList implements ToggleList {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
-    return toggleList?.call(this);
+    return showEvenOrOdd?.call(this);
   }
 
   @override
@@ -781,51 +816,52 @@ class _$ToggleList implements ToggleList {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
-    if (toggleList != null) {
-      return toggleList(this);
+    if (showEvenOrOdd != null) {
+      return showEvenOrOdd(this);
     }
     return orElse();
   }
 }
 
-abstract class ToggleList implements UserInfoEvent {
-  const factory ToggleList() = _$ToggleList;
+abstract class ShowEvenOrOdd implements UserInfoEvent {
+  const factory ShowEvenOrOdd() = _$ShowEvenOrOdd;
 }
 
 /// @nodoc
-abstract class _$$ToDetailsPageCopyWith<$Res> {
-  factory _$$ToDetailsPageCopyWith(
-          _$ToDetailsPage value, $Res Function(_$ToDetailsPage) then) =
-      __$$ToDetailsPageCopyWithImpl<$Res>;
+abstract class _$$ShowMercedesTeamCopyWith<$Res> {
+  factory _$$ShowMercedesTeamCopyWith(
+          _$ShowMercedesTeam value, $Res Function(_$ShowMercedesTeam) then) =
+      __$$ShowMercedesTeamCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ToDetailsPageCopyWithImpl<$Res>
-    extends _$UserInfoEventCopyWithImpl<$Res, _$ToDetailsPage>
-    implements _$$ToDetailsPageCopyWith<$Res> {
-  __$$ToDetailsPageCopyWithImpl(
-      _$ToDetailsPage _value, $Res Function(_$ToDetailsPage) _then)
+class __$$ShowMercedesTeamCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$ShowMercedesTeam>
+    implements _$$ShowMercedesTeamCopyWith<$Res> {
+  __$$ShowMercedesTeamCopyWithImpl(
+      _$ShowMercedesTeam _value, $Res Function(_$ShowMercedesTeam) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ToDetailsPage implements ToDetailsPage {
-  const _$ToDetailsPage();
+class _$ShowMercedesTeam implements ShowMercedesTeam {
+  const _$ShowMercedesTeam();
 
   @override
   String toString() {
-    return 'UserInfoEvent.toDetailsPage()';
+    return 'UserInfoEvent.showMercedesTeam()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ToDetailsPage);
+        (other.runtimeType == runtimeType && other is _$ShowMercedesTeam);
   }
 
   @override
@@ -838,10 +874,11 @@ class _$ToDetailsPage implements ToDetailsPage {
     required TResult Function(String lastName) changeLastName,
     required TResult Function() onValid,
     required TResult Function() displayRankingDetails,
-    required TResult Function() toggleList,
-    required TResult Function() toDetailsPage,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
-    return toDetailsPage();
+    return showMercedesTeam();
   }
 
   @override
@@ -851,10 +888,11 @@ class _$ToDetailsPage implements ToDetailsPage {
     TResult? Function(String lastName)? changeLastName,
     TResult? Function()? onValid,
     TResult? Function()? displayRankingDetails,
-    TResult? Function()? toggleList,
-    TResult? Function()? toDetailsPage,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
-    return toDetailsPage?.call();
+    return showMercedesTeam?.call();
   }
 
   @override
@@ -864,12 +902,13 @@ class _$ToDetailsPage implements ToDetailsPage {
     TResult Function(String lastName)? changeLastName,
     TResult Function()? onValid,
     TResult Function()? displayRankingDetails,
-    TResult Function()? toggleList,
-    TResult Function()? toDetailsPage,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
-    if (toDetailsPage != null) {
-      return toDetailsPage();
+    if (showMercedesTeam != null) {
+      return showMercedesTeam();
     }
     return orElse();
   }
@@ -882,7 +921,178 @@ class _$ToDetailsPage implements ToDetailsPage {
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
-    required TResult Function(ToggleList value) toggleList,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(ToDetailsPage value) toDetailsPage,
+  }) {
+    return showMercedesTeam(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ChangeFirstName value)? changeFirstName,
+    TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(OnValid value)? onValid,
+    TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(ToDetailsPage value)? toDetailsPage,
+  }) {
+    return showMercedesTeam?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChangeFirstName value)? changeFirstName,
+    TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(OnValid value)? onValid,
+    TResult Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(ToDetailsPage value)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (showMercedesTeam != null) {
+      return showMercedesTeam(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShowMercedesTeam implements UserInfoEvent {
+  const factory ShowMercedesTeam() = _$ShowMercedesTeam;
+}
+
+/// @nodoc
+abstract class _$$ToDetailsPageCopyWith<$Res> {
+  factory _$$ToDetailsPageCopyWith(
+          _$ToDetailsPage value, $Res Function(_$ToDetailsPage) then) =
+      __$$ToDetailsPageCopyWithImpl<$Res>;
+  @useResult
+  $Res call({RankingDetailsEntity rankDetails});
+
+  $RankingDetailsEntityCopyWith<$Res> get rankDetails;
+}
+
+/// @nodoc
+class __$$ToDetailsPageCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$ToDetailsPage>
+    implements _$$ToDetailsPageCopyWith<$Res> {
+  __$$ToDetailsPageCopyWithImpl(
+      _$ToDetailsPage _value, $Res Function(_$ToDetailsPage) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? rankDetails = null,
+  }) {
+    return _then(_$ToDetailsPage(
+      null == rankDetails
+          ? _value.rankDetails
+          : rankDetails // ignore: cast_nullable_to_non_nullable
+              as RankingDetailsEntity,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RankingDetailsEntityCopyWith<$Res> get rankDetails {
+    return $RankingDetailsEntityCopyWith<$Res>(_value.rankDetails, (value) {
+      return _then(_value.copyWith(rankDetails: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ToDetailsPage implements ToDetailsPage {
+  const _$ToDetailsPage(this.rankDetails);
+
+  @override
+  final RankingDetailsEntity rankDetails;
+
+  @override
+  String toString() {
+    return 'UserInfoEvent.toDetailsPage(rankDetails: $rankDetails)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ToDetailsPage &&
+            (identical(other.rankDetails, rankDetails) ||
+                other.rankDetails == rankDetails));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, rankDetails);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ToDetailsPageCopyWith<_$ToDetailsPage> get copyWith =>
+      __$$ToDetailsPageCopyWithImpl<_$ToDetailsPage>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName) changeFirstName,
+    required TResult Function(String lastName) changeLastName,
+    required TResult Function() onValid,
+    required TResult Function() displayRankingDetails,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
+  }) {
+    return toDetailsPage(rankDetails);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName)? changeFirstName,
+    TResult? Function(String lastName)? changeLastName,
+    TResult? Function()? onValid,
+    TResult? Function()? displayRankingDetails,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+  }) {
+    return toDetailsPage?.call(rankDetails);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName)? changeFirstName,
+    TResult Function(String lastName)? changeLastName,
+    TResult Function()? onValid,
+    TResult Function()? displayRankingDetails,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (toDetailsPage != null) {
+      return toDetailsPage(rankDetails);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChangeFirstName value) changeFirstName,
+    required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(OnValid value) onValid,
+    required TResult Function(DisplayRankingDetails value)
+        displayRankingDetails,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return toDetailsPage(this);
@@ -895,7 +1105,8 @@ class _$ToDetailsPage implements ToDetailsPage {
     TResult? Function(ChangeLastName value)? changeLastName,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult? Function(ToggleList value)? toggleList,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return toDetailsPage?.call(this);
@@ -908,7 +1119,8 @@ class _$ToDetailsPage implements ToDetailsPage {
     TResult Function(ChangeLastName value)? changeLastName,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
-    TResult Function(ToggleList value)? toggleList,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -920,20 +1132,30 @@ class _$ToDetailsPage implements ToDetailsPage {
 }
 
 abstract class ToDetailsPage implements UserInfoEvent {
-  const factory ToDetailsPage() = _$ToDetailsPage;
+  const factory ToDetailsPage(final RankingDetailsEntity rankDetails) =
+      _$ToDetailsPage;
+
+  RankingDetailsEntity get rankDetails;
+  @JsonKey(ignore: true)
+  _$$ToDetailsPageCopyWith<_$ToDetailsPage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 mixin _$UserInfoState {
-// user info ---------
+  /// user info ---------
   String? get firstName => throw _privateConstructorUsedError;
   String? get lastName => throw _privateConstructorUsedError;
-  bool? get isValid =>
-      throw _privateConstructorUsedError; // home --------------
+  bool? get isValid => throw _privateConstructorUsedError;
+
+  /// home --------------
   List<RankingDetailsEntity>? get rankingDetails =>
-      throw _privateConstructorUsedError; //List<RankingDetailsEntity>? evenRanking,
-//List<RankingDetailsEntity>? oddRanking,
+      throw _privateConstructorUsedError;
+  List<RankingDetailsEntity>? get listFilter =>
+      throw _privateConstructorUsedError;
   bool? get toggleShow => throw _privateConstructorUsedError;
+  int? get selectedIndex => throw _privateConstructorUsedError;
+  RankingDetailsEntity? get rankDetails => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserInfoStateCopyWith<UserInfoState> get copyWith =>
@@ -951,7 +1173,12 @@ abstract class $UserInfoStateCopyWith<$Res> {
       String? lastName,
       bool? isValid,
       List<RankingDetailsEntity>? rankingDetails,
-      bool? toggleShow});
+      List<RankingDetailsEntity>? listFilter,
+      bool? toggleShow,
+      int? selectedIndex,
+      RankingDetailsEntity? rankDetails});
+
+  $RankingDetailsEntityCopyWith<$Res>? get rankDetails;
 }
 
 /// @nodoc
@@ -971,7 +1198,10 @@ class _$UserInfoStateCopyWithImpl<$Res, $Val extends UserInfoState>
     Object? lastName = freezed,
     Object? isValid = freezed,
     Object? rankingDetails = freezed,
+    Object? listFilter = freezed,
     Object? toggleShow = freezed,
+    Object? selectedIndex = freezed,
+    Object? rankDetails = freezed,
   }) {
     return _then(_value.copyWith(
       firstName: freezed == firstName
@@ -990,11 +1220,35 @@ class _$UserInfoStateCopyWithImpl<$Res, $Val extends UserInfoState>
           ? _value.rankingDetails
           : rankingDetails // ignore: cast_nullable_to_non_nullable
               as List<RankingDetailsEntity>?,
+      listFilter: freezed == listFilter
+          ? _value.listFilter
+          : listFilter // ignore: cast_nullable_to_non_nullable
+              as List<RankingDetailsEntity>?,
       toggleShow: freezed == toggleShow
           ? _value.toggleShow
           : toggleShow // ignore: cast_nullable_to_non_nullable
               as bool?,
+      selectedIndex: freezed == selectedIndex
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      rankDetails: freezed == rankDetails
+          ? _value.rankDetails
+          : rankDetails // ignore: cast_nullable_to_non_nullable
+              as RankingDetailsEntity?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RankingDetailsEntityCopyWith<$Res>? get rankDetails {
+    if (_value.rankDetails == null) {
+      return null;
+    }
+
+    return $RankingDetailsEntityCopyWith<$Res>(_value.rankDetails!, (value) {
+      return _then(_value.copyWith(rankDetails: value) as $Val);
+    });
   }
 }
 
@@ -1011,7 +1265,13 @@ abstract class _$$_UserInfoStateCopyWith<$Res>
       String? lastName,
       bool? isValid,
       List<RankingDetailsEntity>? rankingDetails,
-      bool? toggleShow});
+      List<RankingDetailsEntity>? listFilter,
+      bool? toggleShow,
+      int? selectedIndex,
+      RankingDetailsEntity? rankDetails});
+
+  @override
+  $RankingDetailsEntityCopyWith<$Res>? get rankDetails;
 }
 
 /// @nodoc
@@ -1029,7 +1289,10 @@ class __$$_UserInfoStateCopyWithImpl<$Res>
     Object? lastName = freezed,
     Object? isValid = freezed,
     Object? rankingDetails = freezed,
+    Object? listFilter = freezed,
     Object? toggleShow = freezed,
+    Object? selectedIndex = freezed,
+    Object? rankDetails = freezed,
   }) {
     return _then(_$_UserInfoState(
       firstName: freezed == firstName
@@ -1048,10 +1311,22 @@ class __$$_UserInfoStateCopyWithImpl<$Res>
           ? _value._rankingDetails
           : rankingDetails // ignore: cast_nullable_to_non_nullable
               as List<RankingDetailsEntity>?,
+      listFilter: freezed == listFilter
+          ? _value._listFilter
+          : listFilter // ignore: cast_nullable_to_non_nullable
+              as List<RankingDetailsEntity>?,
       toggleShow: freezed == toggleShow
           ? _value.toggleShow
           : toggleShow // ignore: cast_nullable_to_non_nullable
               as bool?,
+      selectedIndex: freezed == selectedIndex
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      rankDetails: freezed == rankDetails
+          ? _value.rankDetails
+          : rankDetails // ignore: cast_nullable_to_non_nullable
+              as RankingDetailsEntity?,
     ));
   }
 }
@@ -1064,19 +1339,25 @@ class _$_UserInfoState implements _UserInfoState {
       this.lastName,
       this.isValid,
       final List<RankingDetailsEntity>? rankingDetails,
-      this.toggleShow})
-      : _rankingDetails = rankingDetails;
+      final List<RankingDetailsEntity>? listFilter,
+      this.toggleShow,
+      this.selectedIndex,
+      this.rankDetails})
+      : _rankingDetails = rankingDetails,
+        _listFilter = listFilter;
 
-// user info ---------
+  /// user info ---------
   @override
   final String? firstName;
   @override
   final String? lastName;
   @override
   final bool? isValid;
-// home --------------
+
+  /// home --------------
   final List<RankingDetailsEntity>? _rankingDetails;
-// home --------------
+
+  /// home --------------
   @override
   List<RankingDetailsEntity>? get rankingDetails {
     final value = _rankingDetails;
@@ -1086,14 +1367,26 @@ class _$_UserInfoState implements _UserInfoState {
     return EqualUnmodifiableListView(value);
   }
 
-//List<RankingDetailsEntity>? evenRanking,
-//List<RankingDetailsEntity>? oddRanking,
+  final List<RankingDetailsEntity>? _listFilter;
+  @override
+  List<RankingDetailsEntity>? get listFilter {
+    final value = _listFilter;
+    if (value == null) return null;
+    if (_listFilter is EqualUnmodifiableListView) return _listFilter;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final bool? toggleShow;
+  @override
+  final int? selectedIndex;
+  @override
+  final RankingDetailsEntity? rankDetails;
 
   @override
   String toString() {
-    return 'UserInfoState(firstName: $firstName, lastName: $lastName, isValid: $isValid, rankingDetails: $rankingDetails, toggleShow: $toggleShow)';
+    return 'UserInfoState(firstName: $firstName, lastName: $lastName, isValid: $isValid, rankingDetails: $rankingDetails, listFilter: $listFilter, toggleShow: $toggleShow, selectedIndex: $selectedIndex, rankDetails: $rankDetails)';
   }
 
   @override
@@ -1108,13 +1401,27 @@ class _$_UserInfoState implements _UserInfoState {
             (identical(other.isValid, isValid) || other.isValid == isValid) &&
             const DeepCollectionEquality()
                 .equals(other._rankingDetails, _rankingDetails) &&
+            const DeepCollectionEquality()
+                .equals(other._listFilter, _listFilter) &&
             (identical(other.toggleShow, toggleShow) ||
-                other.toggleShow == toggleShow));
+                other.toggleShow == toggleShow) &&
+            (identical(other.selectedIndex, selectedIndex) ||
+                other.selectedIndex == selectedIndex) &&
+            (identical(other.rankDetails, rankDetails) ||
+                other.rankDetails == rankDetails));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, firstName, lastName, isValid,
-      const DeepCollectionEquality().hash(_rankingDetails), toggleShow);
+  int get hashCode => Object.hash(
+      runtimeType,
+      firstName,
+      lastName,
+      isValid,
+      const DeepCollectionEquality().hash(_rankingDetails),
+      const DeepCollectionEquality().hash(_listFilter),
+      toggleShow,
+      selectedIndex,
+      rankDetails);
 
   @JsonKey(ignore: true)
   @override
@@ -1129,19 +1436,31 @@ abstract class _UserInfoState implements UserInfoState {
       final String? lastName,
       final bool? isValid,
       final List<RankingDetailsEntity>? rankingDetails,
-      final bool? toggleShow}) = _$_UserInfoState;
+      final List<RankingDetailsEntity>? listFilter,
+      final bool? toggleShow,
+      final int? selectedIndex,
+      final RankingDetailsEntity? rankDetails}) = _$_UserInfoState;
 
-  @override // user info ---------
+  @override
+
+  /// user info ---------
   String? get firstName;
   @override
   String? get lastName;
   @override
   bool? get isValid;
-  @override // home --------------
+  @override
+
+  /// home --------------
   List<RankingDetailsEntity>? get rankingDetails;
-  @override //List<RankingDetailsEntity>? evenRanking,
-//List<RankingDetailsEntity>? oddRanking,
+  @override
+  List<RankingDetailsEntity>? get listFilter;
+  @override
   bool? get toggleShow;
+  @override
+  int? get selectedIndex;
+  @override
+  RankingDetailsEntity? get rankDetails;
   @override
   @JsonKey(ignore: true)
   _$$_UserInfoStateCopyWith<_$_UserInfoState> get copyWith =>

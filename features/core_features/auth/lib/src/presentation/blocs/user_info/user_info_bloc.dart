@@ -17,11 +17,11 @@ class UserInfoBloc extends Bloc<UserInfoEvent, UserInfoState> {
 
     /// home
     on<DisplayRankingDetails>(_displayRankingDetails);
-    on<ToggleList>(_toggleList);
+    on<ShowEvenOrOdd>(_showEvenOrOdd);
+    on<ShowMercedesTeam>(_showMercedesTeam);
 
     /// details
-    //on<ToDetailsPage>(_toDetailsPage);
-
+    on<ToDetailsPage>(_toDetailsPage);
   }
 
   /// declare method :
@@ -54,24 +54,42 @@ class UserInfoBloc extends Bloc<UserInfoEvent, UserInfoState> {
   }
 
   /// home
-
   void _displayRankingDetails(
       DisplayRankingDetails event, Emitter<UserInfoState> emit) {
-    emit(state.copyWith(rankingDetails: getRankingDetails()));
+    emit(state.copyWith(
+        rankingDetails: getRankingDetails(), listFilter: getRankingDetails()));
     Log.d(state.rankingDetails, name: "ranking-details");
   }
 
-// button even odd ----------
-  void _toggleList(
-      ToggleList event, Emitter<UserInfoState> emit) {
-    emit(state.copyWith(toggleShow: state.toggleShow));
-    Log.d(state.toggleShow, name: "toggleShow");
+  // filter even or odd ---------->>
+  void _showEvenOrOdd(ShowEvenOrOdd event, Emitter<UserInfoState> emit) {
+    List<RankingDetailsEntity> filterList = List.empty();
+    filterList = state.rankingDetails!
+        .where((element) =>
+            (element.rank ?? 0) % 2 == (state.toggleShow == true ? 0 : 1))
+        .toList();
+    emit(
+      state.copyWith(
+          toggleShow: state.toggleShow == true ? false : true,
+          listFilter: filterList),
+    );
+  }
+
+  // filter mercedes team ---------->>
+  void _showMercedesTeam(ShowMercedesTeam event, Emitter<UserInfoState> emit) {
+    List<RankingDetailsEntity> mercedesList = List.empty();
+    mercedesList = state.rankingDetails!
+        .where((element) => (element.team) == "Mercedes")
+        .toList();
+    emit(state.copyWith(listFilter: mercedesList));
   }
 
   /// details page
-  /*
-void _toDetailsPage (ToDetailsPage event, Emitter<> emit){}
-   */
+  void _toDetailsPage(ToDetailsPage event, Emitter<UserInfoState> emit) {
+    emit(state.copyWith(rankDetails: event.rankDetails));
+    Log.d(state.rankDetails, name: "event.rankDetails");
+  }
+
 }
 
 List<RankingDetailsEntity> getRankingDetails() {

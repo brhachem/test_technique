@@ -1,5 +1,6 @@
 import 'package:auth/auth.dart';
 import 'package:commons_components/commons_components.dart';
+import 'package:commons_entities/commons_entities.dart';
 import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
