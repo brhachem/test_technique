@@ -12,8 +12,8 @@ part 'home_page_props.dart';
 part 'home_page_widgets.dart';
 
 class HomePage extends StatefulWidget {
-  final String? firstName;
-  const HomePage({super.key, this.firstName});
+  final String? authUser;
+  const HomePage({super.key, this.authUser});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -32,7 +32,7 @@ class _HomePageState extends _HomePageProps with _HomePageWidgets {
               hideKeyboardWhenTouchOutside: true,
               backgroundColor: FoundationColors.customColor11,
               body: Builder(builder: (BuildContext newContext) {
-                return !BasicUtils.isNullOrBlank(state.firstName)
+                return !BasicUtils.isNullOrBlank(widget.authUser)
                     ? getMainWidgets(state)
                     : const SizedBox.shrink();
               }),

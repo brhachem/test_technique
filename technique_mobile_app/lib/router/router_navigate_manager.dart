@@ -17,18 +17,19 @@ class RouterNavigateManager {
           GetIt.I<AppRouter>().replaceAll([const AuthRoute()]);
           break;
 
-        /// splash vers user info
+        /// navigate from splash to user-info ::
         case AppRoutes.userInfoRoutePath:
           GetIt.I<AppRouter>().push(const UserInfoRoute());
           break;
 
-        /// user vers home
-        /// send data (firstName)
+        /// navigate fom user-info to home ::
+        /// send data (authUser : firstName)
         case AppRoutes.homeRoutePath:
-          if (autoRouteModel.data != null && (autoRouteModel.data! is String)) {
+          if (autoRouteModel.data != null &&
+              (autoRouteModel.data! is String)) {
             try {
               GetIt.I<AppRouter>()
-                  .push(HomeRoute(firstName: autoRouteModel.data as String));
+                  .push(HomeRoute(authUser: autoRouteModel.data as String));
             } on Exception catch (_) {}
           }
           break;

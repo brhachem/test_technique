@@ -6,7 +6,6 @@ const authRoute = AutoRoute(
   page: EmptyRouterPageAuth,
   path: AppRoutes.authPath,
   name: AppRoutes.authRouteName,
-  initial: true,
   children: [
     AutoRoute(
       page: UserInfoPage,

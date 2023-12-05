@@ -20,10 +20,13 @@ mixin _$UserInfoEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
@@ -31,10 +34,13 @@ mixin _$UserInfoEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
@@ -42,10 +48,13 @@ mixin _$UserInfoEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) =>
@@ -54,11 +63,14 @@ mixin _$UserInfoEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
@@ -66,10 +78,13 @@ mixin _$UserInfoEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) =>
       throw _privateConstructorUsedError;
@@ -77,10 +92,13 @@ mixin _$UserInfoEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) =>
@@ -172,10 +190,13 @@ class _$ChangeFirstName implements ChangeFirstName {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return changeFirstName(firstName);
@@ -186,10 +207,13 @@ class _$ChangeFirstName implements ChangeFirstName {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return changeFirstName?.call(firstName);
@@ -200,10 +224,13 @@ class _$ChangeFirstName implements ChangeFirstName {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -218,11 +245,14 @@ class _$ChangeFirstName implements ChangeFirstName {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return changeFirstName(this);
@@ -233,10 +263,13 @@ class _$ChangeFirstName implements ChangeFirstName {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return changeFirstName?.call(this);
@@ -247,10 +280,13 @@ class _$ChangeFirstName implements ChangeFirstName {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -337,10 +373,13 @@ class _$ChangeLastName implements ChangeLastName {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return changeLastName(lastName);
@@ -351,10 +390,13 @@ class _$ChangeLastName implements ChangeLastName {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return changeLastName?.call(lastName);
@@ -365,10 +407,13 @@ class _$ChangeLastName implements ChangeLastName {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -383,11 +428,14 @@ class _$ChangeLastName implements ChangeLastName {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return changeLastName(this);
@@ -398,10 +446,13 @@ class _$ChangeLastName implements ChangeLastName {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return changeLastName?.call(this);
@@ -412,10 +463,13 @@ class _$ChangeLastName implements ChangeLastName {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -436,50 +490,81 @@ abstract class ChangeLastName implements UserInfoEvent {
 }
 
 /// @nodoc
-abstract class _$$OnValidCopyWith<$Res> {
-  factory _$$OnValidCopyWith(_$OnValid value, $Res Function(_$OnValid) then) =
-      __$$OnValidCopyWithImpl<$Res>;
+abstract class _$$ChangeEmailCopyWith<$Res> {
+  factory _$$ChangeEmailCopyWith(
+          _$ChangeEmail value, $Res Function(_$ChangeEmail) then) =
+      __$$ChangeEmailCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
 }
 
 /// @nodoc
-class __$$OnValidCopyWithImpl<$Res>
-    extends _$UserInfoEventCopyWithImpl<$Res, _$OnValid>
-    implements _$$OnValidCopyWith<$Res> {
-  __$$OnValidCopyWithImpl(_$OnValid _value, $Res Function(_$OnValid) _then)
+class __$$ChangeEmailCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$ChangeEmail>
+    implements _$$ChangeEmailCopyWith<$Res> {
+  __$$ChangeEmailCopyWithImpl(
+      _$ChangeEmail _value, $Res Function(_$ChangeEmail) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$ChangeEmail(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$OnValid implements OnValid {
-  const _$OnValid();
+class _$ChangeEmail implements ChangeEmail {
+  const _$ChangeEmail(this.email);
+
+  @override
+  final String email;
 
   @override
   String toString() {
-    return 'UserInfoEvent.onValid()';
+    return 'UserInfoEvent.changeEmail(email: $email)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$OnValid);
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeEmail &&
+            (identical(other.email, email) || other.email == email));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, email);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeEmailCopyWith<_$ChangeEmail> get copyWith =>
+      __$$ChangeEmailCopyWithImpl<_$ChangeEmail>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
-    return onValid();
+    return changeEmail(email);
   }
 
   @override
@@ -487,13 +572,16 @@ class _$OnValid implements OnValid {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
-    return onValid?.call();
+    return changeEmail?.call(email);
   }
 
   @override
@@ -501,15 +589,18 @@ class _$OnValid implements OnValid {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
-    if (onValid != null) {
-      return onValid();
+    if (changeEmail != null) {
+      return changeEmail(email);
     }
     return orElse();
   }
@@ -519,11 +610,378 @@ class _$OnValid implements OnValid {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
+    required TResult Function(ToDetailsPage value) toDetailsPage,
+  }) {
+    return changeEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ChangeFirstName value)? changeFirstName,
+    TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
+    TResult? Function(OnValid value)? onValid,
+    TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
+    TResult? Function(ToDetailsPage value)? toDetailsPage,
+  }) {
+    return changeEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChangeFirstName value)? changeFirstName,
+    TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
+    TResult Function(OnValid value)? onValid,
+    TResult Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
+    TResult Function(ToDetailsPage value)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (changeEmail != null) {
+      return changeEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeEmail implements UserInfoEvent {
+  const factory ChangeEmail(final String email) = _$ChangeEmail;
+
+  String get email;
+  @JsonKey(ignore: true)
+  _$$ChangeEmailCopyWith<_$ChangeEmail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeBirthDateCopyWith<$Res> {
+  factory _$$ChangeBirthDateCopyWith(
+          _$ChangeBirthDate value, $Res Function(_$ChangeBirthDate) then) =
+      __$$ChangeBirthDateCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String birthDate});
+}
+
+/// @nodoc
+class __$$ChangeBirthDateCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$ChangeBirthDate>
+    implements _$$ChangeBirthDateCopyWith<$Res> {
+  __$$ChangeBirthDateCopyWithImpl(
+      _$ChangeBirthDate _value, $Res Function(_$ChangeBirthDate) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? birthDate = null,
+  }) {
+    return _then(_$ChangeBirthDate(
+      null == birthDate
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeBirthDate implements ChangeBirthDate {
+  const _$ChangeBirthDate(this.birthDate);
+
+  @override
+  final String birthDate;
+
+  @override
+  String toString() {
+    return 'UserInfoEvent.changeBirthDate(birthDate: $birthDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeBirthDate &&
+            (identical(other.birthDate, birthDate) ||
+                other.birthDate == birthDate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, birthDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeBirthDateCopyWith<_$ChangeBirthDate> get copyWith =>
+      __$$ChangeBirthDateCopyWithImpl<_$ChangeBirthDate>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName) changeFirstName,
+    required TResult Function(String lastName) changeLastName,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
+    required TResult Function() displayRankingDetails,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
+  }) {
+    return changeBirthDate(birthDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName)? changeFirstName,
+    TResult? Function(String lastName)? changeLastName,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
+    TResult? Function()? displayRankingDetails,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+  }) {
+    return changeBirthDate?.call(birthDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName)? changeFirstName,
+    TResult Function(String lastName)? changeLastName,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
+    TResult Function()? displayRankingDetails,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (changeBirthDate != null) {
+      return changeBirthDate(birthDate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChangeFirstName value) changeFirstName,
+    required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
+    required TResult Function(OnValid value) onValid,
+    required TResult Function(DisplayRankingDetails value)
+        displayRankingDetails,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
+    required TResult Function(ToDetailsPage value) toDetailsPage,
+  }) {
+    return changeBirthDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ChangeFirstName value)? changeFirstName,
+    TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
+    TResult? Function(OnValid value)? onValid,
+    TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
+    TResult? Function(ToDetailsPage value)? toDetailsPage,
+  }) {
+    return changeBirthDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChangeFirstName value)? changeFirstName,
+    TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
+    TResult Function(OnValid value)? onValid,
+    TResult Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
+    TResult Function(ToDetailsPage value)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (changeBirthDate != null) {
+      return changeBirthDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeBirthDate implements UserInfoEvent {
+  const factory ChangeBirthDate(final String birthDate) = _$ChangeBirthDate;
+
+  String get birthDate;
+  @JsonKey(ignore: true)
+  _$$ChangeBirthDateCopyWith<_$ChangeBirthDate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnValidCopyWith<$Res> {
+  factory _$$OnValidCopyWith(_$OnValid value, $Res Function(_$OnValid) then) =
+      __$$OnValidCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? authUser});
+}
+
+/// @nodoc
+class __$$OnValidCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$OnValid>
+    implements _$$OnValidCopyWith<$Res> {
+  __$$OnValidCopyWithImpl(_$OnValid _value, $Res Function(_$OnValid) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? authUser = freezed,
+  }) {
+    return _then(_$OnValid(
+      freezed == authUser
+          ? _value.authUser
+          : authUser // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnValid implements OnValid {
+  const _$OnValid(this.authUser);
+
+  @override
+  final String? authUser;
+
+  @override
+  String toString() {
+    return 'UserInfoEvent.onValid(authUser: $authUser)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnValid &&
+            (identical(other.authUser, authUser) ||
+                other.authUser == authUser));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, authUser);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnValidCopyWith<_$OnValid> get copyWith =>
+      __$$OnValidCopyWithImpl<_$OnValid>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName) changeFirstName,
+    required TResult Function(String lastName) changeLastName,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
+    required TResult Function() displayRankingDetails,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
+  }) {
+    return onValid(authUser);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName)? changeFirstName,
+    TResult? Function(String lastName)? changeLastName,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
+    TResult? Function()? displayRankingDetails,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+  }) {
+    return onValid?.call(authUser);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName)? changeFirstName,
+    TResult Function(String lastName)? changeLastName,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
+    TResult Function()? displayRankingDetails,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (onValid != null) {
+      return onValid(authUser);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChangeFirstName value) changeFirstName,
+    required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
+    required TResult Function(OnValid value) onValid,
+    required TResult Function(DisplayRankingDetails value)
+        displayRankingDetails,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return onValid(this);
@@ -534,10 +992,13 @@ class _$OnValid implements OnValid {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return onValid?.call(this);
@@ -548,10 +1009,13 @@ class _$OnValid implements OnValid {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -563,7 +1027,12 @@ class _$OnValid implements OnValid {
 }
 
 abstract class OnValid implements UserInfoEvent {
-  const factory OnValid() = _$OnValid;
+  const factory OnValid(final String? authUser) = _$OnValid;
+
+  String? get authUser;
+  @JsonKey(ignore: true)
+  _$$OnValidCopyWith<_$OnValid> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -606,10 +1075,13 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return displayRankingDetails();
@@ -620,10 +1092,13 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return displayRankingDetails?.call();
@@ -634,10 +1109,13 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -652,11 +1130,14 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return displayRankingDetails(this);
@@ -667,10 +1148,13 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return displayRankingDetails?.call(this);
@@ -681,10 +1165,13 @@ class _$DisplayRankingDetails implements DisplayRankingDetails {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -739,10 +1226,13 @@ class _$ShowEvenOrOdd implements ShowEvenOrOdd {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return showEvenOrOdd();
@@ -753,10 +1243,13 @@ class _$ShowEvenOrOdd implements ShowEvenOrOdd {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return showEvenOrOdd?.call();
@@ -767,10 +1260,13 @@ class _$ShowEvenOrOdd implements ShowEvenOrOdd {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -785,11 +1281,14 @@ class _$ShowEvenOrOdd implements ShowEvenOrOdd {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return showEvenOrOdd(this);
@@ -800,10 +1299,13 @@ class _$ShowEvenOrOdd implements ShowEvenOrOdd {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return showEvenOrOdd?.call(this);
@@ -814,10 +1316,13 @@ class _$ShowEvenOrOdd implements ShowEvenOrOdd {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -872,10 +1377,13 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return showMercedesTeam();
@@ -886,10 +1394,13 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return showMercedesTeam?.call();
@@ -900,10 +1411,13 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -918,11 +1432,14 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return showMercedesTeam(this);
@@ -933,10 +1450,13 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return showMercedesTeam?.call(this);
@@ -947,10 +1467,13 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -963,6 +1486,157 @@ class _$ShowMercedesTeam implements ShowMercedesTeam {
 
 abstract class ShowMercedesTeam implements UserInfoEvent {
   const factory ShowMercedesTeam() = _$ShowMercedesTeam;
+}
+
+/// @nodoc
+abstract class _$$OnLogoutBtnCopyWith<$Res> {
+  factory _$$OnLogoutBtnCopyWith(
+          _$OnLogoutBtn value, $Res Function(_$OnLogoutBtn) then) =
+      __$$OnLogoutBtnCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnLogoutBtnCopyWithImpl<$Res>
+    extends _$UserInfoEventCopyWithImpl<$Res, _$OnLogoutBtn>
+    implements _$$OnLogoutBtnCopyWith<$Res> {
+  __$$OnLogoutBtnCopyWithImpl(
+      _$OnLogoutBtn _value, $Res Function(_$OnLogoutBtn) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OnLogoutBtn implements OnLogoutBtn {
+  const _$OnLogoutBtn();
+
+  @override
+  String toString() {
+    return 'UserInfoEvent.onLogoutBtn()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnLogoutBtn);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName) changeFirstName,
+    required TResult Function(String lastName) changeLastName,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
+    required TResult Function() displayRankingDetails,
+    required TResult Function() showEvenOrOdd,
+    required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
+    required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
+  }) {
+    return onLogoutBtn();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName)? changeFirstName,
+    TResult? Function(String lastName)? changeLastName,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
+    TResult? Function()? displayRankingDetails,
+    TResult? Function()? showEvenOrOdd,
+    TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
+    TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+  }) {
+    return onLogoutBtn?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName)? changeFirstName,
+    TResult Function(String lastName)? changeLastName,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
+    TResult Function()? displayRankingDetails,
+    TResult Function()? showEvenOrOdd,
+    TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
+    TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (onLogoutBtn != null) {
+      return onLogoutBtn();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChangeFirstName value) changeFirstName,
+    required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
+    required TResult Function(OnValid value) onValid,
+    required TResult Function(DisplayRankingDetails value)
+        displayRankingDetails,
+    required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
+    required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
+    required TResult Function(ToDetailsPage value) toDetailsPage,
+  }) {
+    return onLogoutBtn(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ChangeFirstName value)? changeFirstName,
+    TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
+    TResult? Function(OnValid value)? onValid,
+    TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
+    TResult? Function(ToDetailsPage value)? toDetailsPage,
+  }) {
+    return onLogoutBtn?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChangeFirstName value)? changeFirstName,
+    TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
+    TResult Function(OnValid value)? onValid,
+    TResult Function(DisplayRankingDetails value)? displayRankingDetails,
+    TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
+    TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
+    TResult Function(ToDetailsPage value)? toDetailsPage,
+    required TResult orElse(),
+  }) {
+    if (onLogoutBtn != null) {
+      return onLogoutBtn(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnLogoutBtn implements UserInfoEvent {
+  const factory OnLogoutBtn() = _$OnLogoutBtn;
 }
 
 /// @nodoc
@@ -1042,10 +1716,13 @@ class _$ToDetailsPage implements ToDetailsPage {
   TResult when<TResult extends Object?>({
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(String lastName) changeLastName,
-    required TResult Function() onValid,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String birthDate) changeBirthDate,
+    required TResult Function(String? authUser) onValid,
     required TResult Function() displayRankingDetails,
     required TResult Function() showEvenOrOdd,
     required TResult Function() showMercedesTeam,
+    required TResult Function() onLogoutBtn,
     required TResult Function(RankingDetailsEntity rankDetails) toDetailsPage,
   }) {
     return toDetailsPage(rankDetails);
@@ -1056,10 +1733,13 @@ class _$ToDetailsPage implements ToDetailsPage {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(String lastName)? changeLastName,
-    TResult? Function()? onValid,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String birthDate)? changeBirthDate,
+    TResult? Function(String? authUser)? onValid,
     TResult? Function()? displayRankingDetails,
     TResult? Function()? showEvenOrOdd,
     TResult? Function()? showMercedesTeam,
+    TResult? Function()? onLogoutBtn,
     TResult? Function(RankingDetailsEntity rankDetails)? toDetailsPage,
   }) {
     return toDetailsPage?.call(rankDetails);
@@ -1070,10 +1750,13 @@ class _$ToDetailsPage implements ToDetailsPage {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String firstName)? changeFirstName,
     TResult Function(String lastName)? changeLastName,
-    TResult Function()? onValid,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String birthDate)? changeBirthDate,
+    TResult Function(String? authUser)? onValid,
     TResult Function()? displayRankingDetails,
     TResult Function()? showEvenOrOdd,
     TResult Function()? showMercedesTeam,
+    TResult Function()? onLogoutBtn,
     TResult Function(RankingDetailsEntity rankDetails)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -1088,11 +1771,14 @@ class _$ToDetailsPage implements ToDetailsPage {
   TResult map<TResult extends Object?>({
     required TResult Function(ChangeFirstName value) changeFirstName,
     required TResult Function(ChangeLastName value) changeLastName,
+    required TResult Function(ChangeEmail value) changeEmail,
+    required TResult Function(ChangeBirthDate value) changeBirthDate,
     required TResult Function(OnValid value) onValid,
     required TResult Function(DisplayRankingDetails value)
         displayRankingDetails,
     required TResult Function(ShowEvenOrOdd value) showEvenOrOdd,
     required TResult Function(ShowMercedesTeam value) showMercedesTeam,
+    required TResult Function(OnLogoutBtn value) onLogoutBtn,
     required TResult Function(ToDetailsPage value) toDetailsPage,
   }) {
     return toDetailsPage(this);
@@ -1103,10 +1789,13 @@ class _$ToDetailsPage implements ToDetailsPage {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ChangeFirstName value)? changeFirstName,
     TResult? Function(ChangeLastName value)? changeLastName,
+    TResult? Function(ChangeEmail value)? changeEmail,
+    TResult? Function(ChangeBirthDate value)? changeBirthDate,
     TResult? Function(OnValid value)? onValid,
     TResult? Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult? Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult? Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult? Function(OnLogoutBtn value)? onLogoutBtn,
     TResult? Function(ToDetailsPage value)? toDetailsPage,
   }) {
     return toDetailsPage?.call(this);
@@ -1117,10 +1806,13 @@ class _$ToDetailsPage implements ToDetailsPage {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ChangeFirstName value)? changeFirstName,
     TResult Function(ChangeLastName value)? changeLastName,
+    TResult Function(ChangeEmail value)? changeEmail,
+    TResult Function(ChangeBirthDate value)? changeBirthDate,
     TResult Function(OnValid value)? onValid,
     TResult Function(DisplayRankingDetails value)? displayRankingDetails,
     TResult Function(ShowEvenOrOdd value)? showEvenOrOdd,
     TResult Function(ShowMercedesTeam value)? showMercedesTeam,
+    TResult Function(OnLogoutBtn value)? onLogoutBtn,
     TResult Function(ToDetailsPage value)? toDetailsPage,
     required TResult orElse(),
   }) {
@@ -1146,7 +1838,10 @@ mixin _$UserInfoState {
   /// user info ---------
   String? get firstName => throw _privateConstructorUsedError;
   String? get lastName => throw _privateConstructorUsedError;
-  bool? get isValid => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get birthDate => throw _privateConstructorUsedError;
+  bool? get isValid => throw _privateConstructorUsedError; // hive : send name
+  String? get authUser => throw _privateConstructorUsedError;
 
   /// home --------------
   List<RankingDetailsEntity>? get rankingDetails =>
@@ -1156,6 +1851,7 @@ mixin _$UserInfoState {
   bool? get toggleShow => throw _privateConstructorUsedError;
   int? get selectedIndex => throw _privateConstructorUsedError;
   RankingDetailsEntity? get rankDetails => throw _privateConstructorUsedError;
+  bool? get logout => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserInfoStateCopyWith<UserInfoState> get copyWith =>
@@ -1171,12 +1867,16 @@ abstract class $UserInfoStateCopyWith<$Res> {
   $Res call(
       {String? firstName,
       String? lastName,
+      String? email,
+      String? birthDate,
       bool? isValid,
+      String? authUser,
       List<RankingDetailsEntity>? rankingDetails,
       List<RankingDetailsEntity>? listFilter,
       bool? toggleShow,
       int? selectedIndex,
-      RankingDetailsEntity? rankDetails});
+      RankingDetailsEntity? rankDetails,
+      bool? logout});
 
   $RankingDetailsEntityCopyWith<$Res>? get rankDetails;
 }
@@ -1196,12 +1896,16 @@ class _$UserInfoStateCopyWithImpl<$Res, $Val extends UserInfoState>
   $Res call({
     Object? firstName = freezed,
     Object? lastName = freezed,
+    Object? email = freezed,
+    Object? birthDate = freezed,
     Object? isValid = freezed,
+    Object? authUser = freezed,
     Object? rankingDetails = freezed,
     Object? listFilter = freezed,
     Object? toggleShow = freezed,
     Object? selectedIndex = freezed,
     Object? rankDetails = freezed,
+    Object? logout = freezed,
   }) {
     return _then(_value.copyWith(
       firstName: freezed == firstName
@@ -1212,10 +1916,22 @@ class _$UserInfoStateCopyWithImpl<$Res, $Val extends UserInfoState>
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      birthDate: freezed == birthDate
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       isValid: freezed == isValid
           ? _value.isValid
           : isValid // ignore: cast_nullable_to_non_nullable
               as bool?,
+      authUser: freezed == authUser
+          ? _value.authUser
+          : authUser // ignore: cast_nullable_to_non_nullable
+              as String?,
       rankingDetails: freezed == rankingDetails
           ? _value.rankingDetails
           : rankingDetails // ignore: cast_nullable_to_non_nullable
@@ -1236,6 +1952,10 @@ class _$UserInfoStateCopyWithImpl<$Res, $Val extends UserInfoState>
           ? _value.rankDetails
           : rankDetails // ignore: cast_nullable_to_non_nullable
               as RankingDetailsEntity?,
+      logout: freezed == logout
+          ? _value.logout
+          : logout // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 
@@ -1263,12 +1983,16 @@ abstract class _$$_UserInfoStateCopyWith<$Res>
   $Res call(
       {String? firstName,
       String? lastName,
+      String? email,
+      String? birthDate,
       bool? isValid,
+      String? authUser,
       List<RankingDetailsEntity>? rankingDetails,
       List<RankingDetailsEntity>? listFilter,
       bool? toggleShow,
       int? selectedIndex,
-      RankingDetailsEntity? rankDetails});
+      RankingDetailsEntity? rankDetails,
+      bool? logout});
 
   @override
   $RankingDetailsEntityCopyWith<$Res>? get rankDetails;
@@ -1287,12 +2011,16 @@ class __$$_UserInfoStateCopyWithImpl<$Res>
   $Res call({
     Object? firstName = freezed,
     Object? lastName = freezed,
+    Object? email = freezed,
+    Object? birthDate = freezed,
     Object? isValid = freezed,
+    Object? authUser = freezed,
     Object? rankingDetails = freezed,
     Object? listFilter = freezed,
     Object? toggleShow = freezed,
     Object? selectedIndex = freezed,
     Object? rankDetails = freezed,
+    Object? logout = freezed,
   }) {
     return _then(_$_UserInfoState(
       firstName: freezed == firstName
@@ -1303,10 +2031,22 @@ class __$$_UserInfoStateCopyWithImpl<$Res>
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      birthDate: freezed == birthDate
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       isValid: freezed == isValid
           ? _value.isValid
           : isValid // ignore: cast_nullable_to_non_nullable
               as bool?,
+      authUser: freezed == authUser
+          ? _value.authUser
+          : authUser // ignore: cast_nullable_to_non_nullable
+              as String?,
       rankingDetails: freezed == rankingDetails
           ? _value._rankingDetails
           : rankingDetails // ignore: cast_nullable_to_non_nullable
@@ -1327,6 +2067,10 @@ class __$$_UserInfoStateCopyWithImpl<$Res>
           ? _value.rankDetails
           : rankDetails // ignore: cast_nullable_to_non_nullable
               as RankingDetailsEntity?,
+      logout: freezed == logout
+          ? _value.logout
+          : logout // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -1337,12 +2081,16 @@ class _$_UserInfoState implements _UserInfoState {
   const _$_UserInfoState(
       {this.firstName,
       this.lastName,
+      this.email,
+      this.birthDate,
       this.isValid,
+      this.authUser,
       final List<RankingDetailsEntity>? rankingDetails,
       final List<RankingDetailsEntity>? listFilter,
       this.toggleShow,
       this.selectedIndex,
-      this.rankDetails})
+      this.rankDetails,
+      this.logout})
       : _rankingDetails = rankingDetails,
         _listFilter = listFilter;
 
@@ -1352,7 +2100,14 @@ class _$_UserInfoState implements _UserInfoState {
   @override
   final String? lastName;
   @override
+  final String? email;
+  @override
+  final String? birthDate;
+  @override
   final bool? isValid;
+// hive : send name
+  @override
+  final String? authUser;
 
   /// home --------------
   final List<RankingDetailsEntity>? _rankingDetails;
@@ -1383,10 +2138,12 @@ class _$_UserInfoState implements _UserInfoState {
   final int? selectedIndex;
   @override
   final RankingDetailsEntity? rankDetails;
+  @override
+  final bool? logout;
 
   @override
   String toString() {
-    return 'UserInfoState(firstName: $firstName, lastName: $lastName, isValid: $isValid, rankingDetails: $rankingDetails, listFilter: $listFilter, toggleShow: $toggleShow, selectedIndex: $selectedIndex, rankDetails: $rankDetails)';
+    return 'UserInfoState(firstName: $firstName, lastName: $lastName, email: $email, birthDate: $birthDate, isValid: $isValid, authUser: $authUser, rankingDetails: $rankingDetails, listFilter: $listFilter, toggleShow: $toggleShow, selectedIndex: $selectedIndex, rankDetails: $rankDetails, logout: $logout)';
   }
 
   @override
@@ -1398,7 +2155,12 @@ class _$_UserInfoState implements _UserInfoState {
                 other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
                 other.lastName == lastName) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.birthDate, birthDate) ||
+                other.birthDate == birthDate) &&
             (identical(other.isValid, isValid) || other.isValid == isValid) &&
+            (identical(other.authUser, authUser) ||
+                other.authUser == authUser) &&
             const DeepCollectionEquality()
                 .equals(other._rankingDetails, _rankingDetails) &&
             const DeepCollectionEquality()
@@ -1408,7 +2170,8 @@ class _$_UserInfoState implements _UserInfoState {
             (identical(other.selectedIndex, selectedIndex) ||
                 other.selectedIndex == selectedIndex) &&
             (identical(other.rankDetails, rankDetails) ||
-                other.rankDetails == rankDetails));
+                other.rankDetails == rankDetails) &&
+            (identical(other.logout, logout) || other.logout == logout));
   }
 
   @override
@@ -1416,12 +2179,16 @@ class _$_UserInfoState implements _UserInfoState {
       runtimeType,
       firstName,
       lastName,
+      email,
+      birthDate,
       isValid,
+      authUser,
       const DeepCollectionEquality().hash(_rankingDetails),
       const DeepCollectionEquality().hash(_listFilter),
       toggleShow,
       selectedIndex,
-      rankDetails);
+      rankDetails,
+      logout);
 
   @JsonKey(ignore: true)
   @override
@@ -1434,12 +2201,16 @@ abstract class _UserInfoState implements UserInfoState {
   const factory _UserInfoState(
       {final String? firstName,
       final String? lastName,
+      final String? email,
+      final String? birthDate,
       final bool? isValid,
+      final String? authUser,
       final List<RankingDetailsEntity>? rankingDetails,
       final List<RankingDetailsEntity>? listFilter,
       final bool? toggleShow,
       final int? selectedIndex,
-      final RankingDetailsEntity? rankDetails}) = _$_UserInfoState;
+      final RankingDetailsEntity? rankDetails,
+      final bool? logout}) = _$_UserInfoState;
 
   @override
 
@@ -1448,7 +2219,13 @@ abstract class _UserInfoState implements UserInfoState {
   @override
   String? get lastName;
   @override
+  String? get email;
+  @override
+  String? get birthDate;
+  @override
   bool? get isValid;
+  @override // hive : send name
+  String? get authUser;
   @override
 
   /// home --------------
@@ -1461,6 +2238,8 @@ abstract class _UserInfoState implements UserInfoState {
   int? get selectedIndex;
   @override
   RankingDetailsEntity? get rankDetails;
+  @override
+  bool? get logout;
   @override
   @JsonKey(ignore: true)
   _$$_UserInfoStateCopyWith<_$_UserInfoState> get copyWith =>

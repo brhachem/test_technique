@@ -6,7 +6,12 @@ class UserInfoState with _$UserInfoState {
     /// user info ---------
     String? firstName,
     String? lastName,
+    String? email,
+    String? birthDate,
     bool? isValid,
+
+    // hive : send name
+    String? authUser,
 
     /// home --------------
     List<RankingDetailsEntity>? rankingDetails,
@@ -14,19 +19,25 @@ class UserInfoState with _$UserInfoState {
     bool? toggleShow,
     int? selectedIndex,
     RankingDetailsEntity? rankDetails,
+    bool? logout,
   }) = _UserInfoState;
 
   factory UserInfoState.initial() => const UserInfoState(
         /// user info
         firstName: "",
         lastName: "",
+        email: "",
+        birthDate: "",
         isValid: null,
+        //hive : send name
+        authUser: "",
 
         /// home -----------
         rankingDetails: [],
         listFilter: [],
         toggleShow: true,
         selectedIndex: 0,
-      rankDetails: null,
+        rankDetails: null,
+        logout: null,
       );
 }

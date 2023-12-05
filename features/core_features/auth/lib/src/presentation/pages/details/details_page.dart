@@ -25,6 +25,10 @@ class _DetailsPageState extends _DetailsPageProps with _DetailsPageWidgets {
       builder: (context, state) {
         if (!BasicUtils.emptyList(state.rankingDetails)) {
           return CommonScaffold(
+            appBar: AppBar(
+              backgroundColor: FoundationColors.customColor11,
+              iconTheme: const IconThemeData(color: FoundationColors.onPrimary),
+            ),
             hideKeyboardWhenTouchOutside: true,
             backgroundColor: FoundationColors.customColor11,
             body: Builder(builder: (BuildContext newContext) {
@@ -46,14 +50,15 @@ class _DetailsPageState extends _DetailsPageProps with _DetailsPageWidgets {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            padding: EdgeInsets.all(
-                                BasicDimens.horizontalPadding),
+                            padding:
+                                EdgeInsets.all(BasicDimens.horizontalPadding),
                             color: FoundationColors.onPrimary,
                             child: Column(
                               children: [
                                 SizedBox(width: BasicDimens.spacingS),
                                 Container(
-                                  padding: EdgeInsets.all(BasicDimens.spacingXXS),
+                                  padding:
+                                      EdgeInsets.all(BasicDimens.spacingXXS),
                                   child: BasicText(
                                     TextType.displayMedium,
                                     text: widget.rankDetails?.rank.toString() ??
@@ -77,6 +82,12 @@ class _DetailsPageState extends _DetailsPageProps with _DetailsPageWidgets {
                                   TextType.bodyLarge,
                                   text: widget.rankDetails?.team ?? "",
                                 ),
+                                SizedBox(height: BasicDimens.spacingCustom20),
+                                BasicText(
+                                  TextType.bodyLarge,
+                                  text: widget.rankDetails?.description ?? "",
+                                  maxLines: 10,
+                                ),
                               ],
                             ),
                           ),
@@ -88,7 +99,7 @@ class _DetailsPageState extends _DetailsPageProps with _DetailsPageWidgets {
               );
             }),
           );
-        }else{
+        } else {
           return const SizedBox.shrink();
         }
       },

@@ -20,14 +20,11 @@ RankingDetailsEntity _$RankingDetailsEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RankingDetailsEntity {
-  @JsonKey(name: "rank")
   int? get rank => throw _privateConstructorUsedError;
-  @JsonKey(name: "name")
   String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: "team")
   String? get team => throw _privateConstructorUsedError;
-  @JsonKey(name: "avatar")
   String? get avatar => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,10 +39,11 @@ abstract class $RankingDetailsEntityCopyWith<$Res> {
       _$RankingDetailsEntityCopyWithImpl<$Res, RankingDetailsEntity>;
   @useResult
   $Res call(
-      {@JsonKey(name: "rank") int? rank,
-      @JsonKey(name: "name") String? name,
-      @JsonKey(name: "team") String? team,
-      @JsonKey(name: "avatar") String? avatar});
+      {int? rank,
+      String? name,
+      String? team,
+      String? avatar,
+      String? description});
 }
 
 /// @nodoc
@@ -66,6 +64,7 @@ class _$RankingDetailsEntityCopyWithImpl<$Res,
     Object? name = freezed,
     Object? team = freezed,
     Object? avatar = freezed,
+    Object? description = freezed,
   }) {
     return _then(_value.copyWith(
       rank: freezed == rank
@@ -84,6 +83,10 @@ class _$RankingDetailsEntityCopyWithImpl<$Res,
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -97,10 +100,11 @@ abstract class _$$_RankingDetailsEntityCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "rank") int? rank,
-      @JsonKey(name: "name") String? name,
-      @JsonKey(name: "team") String? team,
-      @JsonKey(name: "avatar") String? avatar});
+      {int? rank,
+      String? name,
+      String? team,
+      String? avatar,
+      String? description});
 }
 
 /// @nodoc
@@ -118,6 +122,7 @@ class __$$_RankingDetailsEntityCopyWithImpl<$Res>
     Object? name = freezed,
     Object? team = freezed,
     Object? avatar = freezed,
+    Object? description = freezed,
   }) {
     return _then(_$_RankingDetailsEntity(
       rank: freezed == rank
@@ -136,6 +141,10 @@ class __$$_RankingDetailsEntityCopyWithImpl<$Res>
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -144,30 +153,25 @@ class __$$_RankingDetailsEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RankingDetailsEntity implements _RankingDetailsEntity {
   const _$_RankingDetailsEntity(
-      {@JsonKey(name: "rank") this.rank,
-      @JsonKey(name: "name") this.name,
-      @JsonKey(name: "team") this.team,
-      @JsonKey(name: "avatar") this.avatar});
+      {this.rank, this.name, this.team, this.avatar, this.description});
 
   factory _$_RankingDetailsEntity.fromJson(Map<String, dynamic> json) =>
       _$$_RankingDetailsEntityFromJson(json);
 
   @override
-  @JsonKey(name: "rank")
   final int? rank;
   @override
-  @JsonKey(name: "name")
   final String? name;
   @override
-  @JsonKey(name: "team")
   final String? team;
   @override
-  @JsonKey(name: "avatar")
   final String? avatar;
+  @override
+  final String? description;
 
   @override
   String toString() {
-    return 'RankingDetailsEntity(rank: $rank, name: $name, team: $team, avatar: $avatar)';
+    return 'RankingDetailsEntity(rank: $rank, name: $name, team: $team, avatar: $avatar, description: $description)';
   }
 
   @override
@@ -178,12 +182,15 @@ class _$_RankingDetailsEntity implements _RankingDetailsEntity {
             (identical(other.rank, rank) || other.rank == rank) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.team, team) || other.team == team) &&
-            (identical(other.avatar, avatar) || other.avatar == avatar));
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.description, description) ||
+                other.description == description));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, rank, name, team, avatar);
+  int get hashCode =>
+      Object.hash(runtimeType, rank, name, team, avatar, description);
 
   @JsonKey(ignore: true)
   @override
@@ -202,26 +209,25 @@ class _$_RankingDetailsEntity implements _RankingDetailsEntity {
 
 abstract class _RankingDetailsEntity implements RankingDetailsEntity {
   const factory _RankingDetailsEntity(
-      {@JsonKey(name: "rank") final int? rank,
-      @JsonKey(name: "name") final String? name,
-      @JsonKey(name: "team") final String? team,
-      @JsonKey(name: "avatar") final String? avatar}) = _$_RankingDetailsEntity;
+      {final int? rank,
+      final String? name,
+      final String? team,
+      final String? avatar,
+      final String? description}) = _$_RankingDetailsEntity;
 
   factory _RankingDetailsEntity.fromJson(Map<String, dynamic> json) =
       _$_RankingDetailsEntity.fromJson;
 
   @override
-  @JsonKey(name: "rank")
   int? get rank;
   @override
-  @JsonKey(name: "name")
   String? get name;
   @override
-  @JsonKey(name: "team")
   String? get team;
   @override
-  @JsonKey(name: "avatar")
   String? get avatar;
+  @override
+  String? get description;
   @override
   @JsonKey(ignore: true)
   _$$_RankingDetailsEntityCopyWith<_$_RankingDetailsEntity> get copyWith =>

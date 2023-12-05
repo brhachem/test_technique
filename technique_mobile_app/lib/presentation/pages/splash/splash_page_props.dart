@@ -10,11 +10,13 @@ abstract class _SplashPageProps extends State<SplashPage>
 
   _navigateToNext() async {
     await Future.delayed(const Duration(seconds: 4), () {
+      /*
       GetIt.I<RouteCubit>().navigateRouteNamed(
-        const AutoRouteModel(
-          path: AppRoutes.authPath,
-        ),
-      );
+        const AutoRouteModel(path: AppRoutes.authPath));
+       */
+      context
+          .read<SplashBloc>()
+          .add(const SplashEvent.userIsAuth());
     });
     Log.d("Splash-Props");
   }

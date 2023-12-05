@@ -13,6 +13,7 @@ _$_RankingDetailsEntity _$$_RankingDetailsEntityFromJson(
       name: json['name'] as String?,
       team: json['team'] as String?,
       avatar: json['avatar'] as String?,
+      description: json['description'] as String?,
     );
 
 Map<String, dynamic> _$$_RankingDetailsEntityToJson(
@@ -22,4 +23,5 @@ Map<String, dynamic> _$$_RankingDetailsEntityToJson(
       'name': instance.name,
       'team': instance.team,
       'avatar': instance.avatar,
+      'description': instance.description,
     };

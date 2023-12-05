@@ -26,7 +26,7 @@ class AppRouter extends _i3.RootStackRouter {
     SplashRoute.name: (routeData) {
       return _i3.AdaptivePage<dynamic>(
         routeData: routeData,
-        child: const _i1.SplashPage(),
+        child: _i3.WrappedRoute(child: const _i1.SplashPage()),
       );
     },
     AuthRoute.name: (routeData) {
@@ -48,7 +48,7 @@ class AppRouter extends _i3.RootStackRouter {
         routeData: routeData,
         child: _i2.HomePage(
           key: args.key,
-          firstName: args.firstName,
+          authUser: args.authUser,
         ),
       );
     },
@@ -81,13 +81,6 @@ class AppRouter extends _i3.RootStackRouter {
           AuthRoute.name,
           path: 'Auth',
           children: [
-            _i3.RouteConfig(
-              '#redirect',
-              path: '',
-              parent: AuthRoute.name,
-              redirectTo: 'UserInfo',
-              fullMatch: true,
-            ),
             _i3.RouteConfig(
               UserInfoRoute.name,
               path: 'UserInfo',
@@ -150,13 +143,13 @@ class UserInfoRoute extends _i3.PageRouteInfo<void> {
 class HomeRoute extends _i3.PageRouteInfo<HomeRouteArgs> {
   HomeRoute({
     _i5.Key? key,
-    String? firstName,
+    String? authUser,
   }) : super(
           HomeRoute.name,
           path: 'Home',
           args: HomeRouteArgs(
             key: key,
-            firstName: firstName,
+            authUser: authUser,
           ),
         );
 
@@ -166,16 +159,16 @@ class HomeRoute extends _i3.PageRouteInfo<HomeRouteArgs> {
 class HomeRouteArgs {
   const HomeRouteArgs({
     this.key,
-    this.firstName,
+    this.authUser,
   });
 
   final _i5.Key? key;
 
-  final String? firstName;
+  final String? authUser;
 
   @override
   String toString() {
-    return 'HomeRouteArgs{key: $key, firstName: $firstName}';
+    return 'HomeRouteArgs{key: $key, authUser: $authUser}';
   }
 }
 

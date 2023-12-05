@@ -28,51 +28,60 @@ class _UserInfoPageState extends _UserInfoPageProps with _UserInfoPageWidgets {
           backgroundColor: FoundationColors.customColor11,
           body: Builder(builder: (BuildContext newContext) {
             return SafeArea(
-              child: Container(
-                color: FoundationColors.onPrimary,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: BasicDimens.horizontalPadding,
-                    vertical: BasicDimens.verticalPadding,
-                  ),
-                  child: NestedScrollView(
-                    headerSliverBuilder:
-                        (BuildContext context, bool innerBoxIsScrolled) {
-                      return <Widget>[
-                        /// header
-                        SliverToBoxAdapter(
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(BasicDimens.spacingCustom32),
+                  topRight: Radius.circular(BasicDimens.spacingCustom32),
+                ),
+                child: Container(
+                  color: FoundationColors.onPrimary,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: BasicDimens.horizontalPadding,
+                      vertical: BasicDimens.verticalPadding,
+                    ),
+                    child: NestedScrollView(
+                      headerSliverBuilder:
+                          (BuildContext context, bool innerBoxIsScrolled) {
+                        return <Widget>[
+                          /// header
+                          SliverToBoxAdapter(
+                              child:
+                                  SizedBox(height: BasicDimens.spacingCustom64)),
+                          /// logo ---------
+                          SliverToBoxAdapter(
                             child:
-                                SizedBox(height: BasicDimens.spacingCustom100)),
-                        SliverToBoxAdapter(
-                          child:
-                              SvgPicture.asset(FoundationAssets.iconSecondLogo),
-                        ),
-                        SliverToBoxAdapter(
-                            child:
-                                SizedBox(height: BasicDimens.spacingCustom48)),
-                        SliverToBoxAdapter(
-                          child: BasicText(
-                            TextType.headlineMedium,
-                            text: S.current.lets_get_familiar,
-                            textAlign: TextAlign.center,
+                                SvgPicture.asset(FoundationAssets.iconSecondLogo),
                           ),
-                        ),
-                        SliverToBoxAdapter(
-                            child:
-                                SizedBox(height: BasicDimens.spacingCustom10)),
-                        SliverToBoxAdapter(
-                          child: BasicText(
-                            TextType.titleSmall,
-                            text: S.current.introduce_yourself,
-                            textAlign: TextAlign.center,
+                          SliverToBoxAdapter(
+                              child:
+                                  SizedBox(height: BasicDimens.spacingCustom48)),
+                          /// first title -------
+                          SliverToBoxAdapter(
+                            child: BasicText(
+                              TextType.headlineMedium,
+                              text: S.current.lets_get_familiar,
+                              textAlign: TextAlign.center,
+                            ),
                           ),
-                        ),
-                        SliverToBoxAdapter(
-                            child:
-                                SizedBox(height: BasicDimens.spacingCustom150)),
-                      ];
-                    },
-                    body: const UserInfoBody(),
+                          SliverToBoxAdapter(
+                              child:
+                                  SizedBox(height: BasicDimens.spacingCustom10)),
+                          /// second title --------
+                          SliverToBoxAdapter(
+                            child: BasicText(
+                              TextType.titleSmall,
+                              text: S.current.introduce_yourself,
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          SliverToBoxAdapter(
+                              child:
+                                  SizedBox(height: BasicDimens.spacingCustom64)),
+                        ];
+                      },
+                      body: const UserInfoBody(),
+                    ),
                   ),
                 ),
               ),

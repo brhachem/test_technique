@@ -15,14 +15,11 @@ String rankingDetailsEntityToJson(RankingDetailsEntity data) => json.encode(data
 @freezed
 class RankingDetailsEntity with _$RankingDetailsEntity {
   const factory RankingDetailsEntity({
-    @JsonKey(name: "rank")
     int? rank,
-    @JsonKey(name: "name")
     String? name,
-    @JsonKey(name: "team")
     String? team,
-    @JsonKey(name: "avatar")
     String? avatar,
+    String? description,
   }) = _RankingDetailsEntity;
 
   factory RankingDetailsEntity.fromJson(Map<String, dynamic> json) => _$RankingDetailsEntityFromJson(json);

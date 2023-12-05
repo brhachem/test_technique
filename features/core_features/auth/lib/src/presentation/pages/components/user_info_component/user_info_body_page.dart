@@ -3,6 +3,7 @@ import 'package:commons_components/commons_components.dart';
 import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:l10n/generated/l10n.dart';
 import 'package:preferences/preferences.dart';
 

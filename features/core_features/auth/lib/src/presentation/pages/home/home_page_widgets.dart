@@ -28,21 +28,30 @@ mixin _HomePageWidgets on _HomePageProps {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // good morning
+                        /// good morning
                         BasicText(
                           TextType.titleLarge,
                           text: S.current.label_good_morning,
                           textColor: FoundationColors.onPrimary,
                         ),
-                        // user name
+
+                        /// user name (from hive) ::::
                         BasicText(
                           TextType.bodyLarge,
-                          text: widget.firstName ?? "",
+                          text: widget.authUser ?? "",
                           textColor: FoundationColors.onPrimary,
                         ),
                       ],
                     ),
                   ],
+                ),
+
+                /// Logout btn ----------
+                BasicButton.filled(
+                  text: "Logout",
+                  onPressed: () {
+                    _logoutBox();
+                  },
                 ),
               ],
             ),
@@ -66,13 +75,13 @@ mixin _HomePageWidgets on _HomePageProps {
                 child: Center(
                   child: Column(
                     children: [
-                      SizedBox(height: BasicDimens.spacingCustom14),
+                      SizedBox(height: BasicDimens.spacingCustom18),
                       BasicText(
                         TextType.titleLarge,
                         text: S.current.label_top_ranking,
                         textColor: FoundationColors.customColor11,
                       ),
-                      SizedBox(height: BasicDimens.spacingCustom14),
+                      SizedBox(height: BasicDimens.spacingCustom18),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -86,7 +95,7 @@ mixin _HomePageWidgets on _HomePageProps {
                           ),
                           // show pairs || impairs button
                           BasicButton.filled(
-                            text: "filter",
+                            text: state.toggleShow == true ? "even" : "odd",
                             onPressed: () {
                               context
                                   .read<UserInfoBloc>()
@@ -118,6 +127,7 @@ mixin _HomePageWidgets on _HomePageProps {
                                       GetIt.I<RouteCubit>()
                                           .navigateRouteNamed(AutoRouteModel(
                                         path: AppRoutes.detailsPageRoutePath,
+
                                         /// send list
                                         data: state.listFilter?[index],
                                       ));
@@ -130,7 +140,7 @@ mixin _HomePageWidgets on _HomePageProps {
                                         state.listFilter?[index].avatar ?? "",
                                   );
                                 },
-                                itemCount: state.listFilter?.length??0,
+                                itemCount: state.listFilter?.length ?? 0,
                                 separatorBuilder:
                                     (BuildContext context, int index) {
                                   return const BasicDivider.horizontal(

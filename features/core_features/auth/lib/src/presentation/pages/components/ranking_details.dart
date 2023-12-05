@@ -22,7 +22,7 @@ class RankingDetails extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 14),
+        padding: EdgeInsets.only(bottom: BasicDimens.spacingCustom),
         child: Container(
           padding: EdgeInsets.all(BasicDimens.horizontalPadding),
           color: FoundationColors.onPrimary,
